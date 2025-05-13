@@ -1,0 +1,151 @@
+
+    <div class="content">
+        <h2>Give away a Pet!</h2> <hr><br>
+                <!--Form for a pet give away-->
+                <form id="petGiveAwayForm" method="POST" action="/petGiveAwayFormSubmitted">
+                    <fieldset class="formsForPetGiveAway">
+                        <legend>Fill in this form to give away a pet!</legend>
+
+                    <label>Type of pet:</label>
+
+                    <br>
+
+                    <label>
+                        <input type="radio" id="dog" name="pet_type" value="dog" checked>
+                        Dog
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" id="cat" name="pet_type" value="cat">
+                        Cat
+                    </label>
+
+                    <br><br>
+
+                    <label>Breed of the pet:
+                        <input type="text" id="breed" name="breed" placeholder="Enter a breed">
+                    </label>
+
+                    <br><br>
+
+                    <label>Age of the pet:
+                    <select name="age" id="age" size="1">
+                        <option value="" style="color: grey" selected>Select an age</option>
+                        <option value="less_than_1_y/o">Less than 1 year old</option>
+                        <option value="1_to_5_y/o">1-5 years old</option>
+                        <option value="5_to_10_y/o">5-10 years old</option>
+                        <option value="10_to_15_y/o">10-15 years old</option>
+                        <option value="more_than_15_y/o">More than 15 years old</option>
+                    </select>
+                    </label>
+
+                    <br><br>
+
+                    <label>Gender of the pet:
+                        <select name="gender" id="gender" size="1">
+                            <option value="" selected style="color: grey;">Select a gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </label>
+                    <br><br>
+                    
+                    <label>Gets along with other dogs?
+                        <select name="friendly_with_dogs" id="friendly_with_dogs" size="1">
+                            <option value="" selected style="color: grey;">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <br> <br>
+
+                    <label>Gets along with other cats?
+                        <select name="friendly_with_cats" id="friendly_with_cats" size="1">
+                            <option value="" selected style="color: grey;">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+                    
+                    <br> <br>
+
+                    <label>Suitable for a family with small children?
+                        <select name="friendly_with_children" id="friendly_with_children" size="1">
+                            <option value="" selected style="color: grey;">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </label>
+
+                    <br> <br>
+
+                    <label>
+                        Comments:
+                        <br>
+                        <textarea name="comments" id="comments" rows = "3" cols="40"></textarea>
+                    </label>
+                    
+                    <br><br>
+
+                    <label>Current owner's name:</label>
+
+                    <br><br>
+                    <label>
+                        &emsp; Given Name:
+                        <input type="text" id="ownerGivenName" name="ownerGivenName" placeholder="Enter your given name here"/>
+                    </label>
+
+                    <br /><br>
+
+                    <label>
+                        &emsp; Family Name:
+                        <input type="text" id="ownerFamilyName" name="ownerFamilyName" placeholder="Enter your family name here"/>
+                    </label>
+
+                    <br><br>
+
+                    <label>
+                        Current owner's email:
+                        <input type="text" id="ownerEmail" name="ownerEmail" placeholder="Enter your email here"/>
+                    </label>
+                    
+                    <br><br>
+
+                    <input type = "submit" value = "Submit"/><input type = "reset" value = "Reset" />
+
+                    </fieldset>
+                </form>
+        <br><br>
+    </div>
+
+    <script>
+        document.getElementById("petGiveAwayForm").addEventListener("submit", event => {
+
+          let breed = document.getElementById("breed").value;
+          let age = document.getElementById("age").value;
+          let gender = document.getElementById("gender").value;
+          let friendly_with_dogs = document.getElementById("friendly_with_dogs").value;
+          let friendly_with_cats = document.getElementById("friendly_with_cats").value;
+          let friendly_with_children = document.getElementById("friendly_with_children").value;
+          let comments = document.getElementById("comments").value;
+          let owner_given_name = document.getElementById("ownerGivenName").value;
+          let owner_family_name = document.getElementById("ownerFamilyName").value;
+          let owner_email = document.getElementById("ownerEmail").value;
+      
+          let ownerEmailProperFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$/;
+      
+          if (breed === "" || age === "" || gender === "" || friendly_with_dogs === "" || 
+            friendly_with_cats === "" || friendly_with_children === "" || comments.trim() === "" 
+            || owner_given_name.trim() === "" || owner_family_name.trim() === "" ||
+            owner_email.trim() === ""){
+            alert("Please fill in all the fields in the form.");
+            event.preventDefault();
+          }
+
+          else if (!ownerEmailProperFormat.test(owner_email)) {
+            alert("Please make sure that the email follows a valid format.");
+            event.preventDefault();
+          }
+        });
+    </script>

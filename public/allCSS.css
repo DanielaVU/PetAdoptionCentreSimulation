@@ -1,0 +1,194 @@
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: rgb(158, 187, 212);
+}
+
+header {
+    text-align: center;
+    background-color: rgb(138, 172, 201);
+}
+
+#dateAndTime {
+    text-align : right;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    color: rgb(83, 62, 62);
+    font-style: italic;
+}
+
+.logo {
+    width: 100px;
+}
+
+.title {
+    padding-right:30px;
+}
+
+table {
+    margin: auto;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.home, .browsePets, .findPet, .dogCare, .catCare, .petGiveAway, .createAccount, .login, .contact {
+    background-color: rgb(110, 149, 184);
+    font-weight: bolder;
+}
+
+.home:hover, .browsePets:hover, .findPet:hover, .dogCare:hover, .catCare:hover, .petGiveAway:hover, .createAccount:hover, .login:hover, .contact:hover{
+    color: white;
+    background-color: rgb(37, 52, 65);
+}
+
+.logout {
+    background-color: rgb(211, 113, 113);
+    font-weight: bolder;
+}
+
+.logout:hover {
+    color: rgb(211, 113, 113);
+    background-color: rgb(37, 52, 65);
+}
+
+li {
+    list-style-type: none;
+    width: 150px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: rgb(158, 187, 212);
+}
+
+ul {
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.content {
+    margin-left: 200px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(110, 149, 184);
+    overflow-wrap: break-word;
+}
+
+footer {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgb(37, 52, 65);
+    color:aliceblue;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    left: -30px;
+    top: 25%;
+}
+
+.welcomePagePicture {
+    width: 300px;
+}
+
+.credits {
+    font-size: 12px;
+}
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    .content {
+        margin-left: 300px;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: rgb(110, 149, 184);
+        overflow-wrap: break-word;
+        padding-bottom:70%;
+    }
+
+    ul {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    li {
+        list-style-type: none;
+        width: 250px;
+        padding: 10px;
+        padding-left: 20px;
+        background-color: rgb(158, 187, 212);
+    }
+
+    .welcomePagePicture {
+        width: 200px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .title {
+        padding-right: 10px;
+    }
+
+    p, footer {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+
+    .content {
+        margin-left: 300px;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: rgb(110, 149, 184);
+        overflow-wrap: break-word;
+        padding-bottom:70%;
+    }
+
+    ul {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    li {
+        list-style-type: none;
+        width: 250px;
+        padding: 10px;
+        padding-left: 20px;
+        background-color: rgb(158, 187, 212);
+    }
+
+    .welcomePagePicture {
+        width: 200px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .title {
+        padding-right: 10px;
+    }
+
+    p, footer {
+        font-size: 30px;
+    }
+}

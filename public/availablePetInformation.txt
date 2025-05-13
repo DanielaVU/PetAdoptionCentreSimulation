@@ -1,0 +1,4 @@
+1:DanielaVU:cat:Siamese:1_to_5_y/o:female:yes:yes:yes:Very friendly:Daniela:Villamizar Useche:v_dani@live.concordia.ca
+2:DanielaVU:cat:Sphynx:1_to_5_y/o:male:no:yes:no:Very cute:Daniela:Villamizar Useche:v_dani@live.concordia.ca
+3:DanielaVU:dog:Poodle:5_to_10_y/o:male:no:no:yes:Good:Daniela:Villamizar Useche:v_dani@live.concordia.ca
+4:DanielaVU:dog:Golden Retriever:1_to_5_y/o:female:yes:yes:yes:aaaaa:Daniela:Villamizar Useche:v_dani@live.concordia.ca

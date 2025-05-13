@@ -1,0 +1,106 @@
+
+    <div class="content">
+        <h2>Find a  Pet!</h2> <hr><br>
+
+        <form id="findPetForm" method="POST" action="/findPetFormSubmitted">
+            <fieldset class="formsForFindPet">
+                <legend>Fill in this form to find a pet!</legend>
+                <br>
+
+                <label>Type of pet:</label>
+
+                <br>
+
+                <label>
+                    <input type="radio" id="dog" name="pet_type" value="dog" checked>
+                    Dog
+                </label>
+                <br>
+                <label>
+                    <input type="radio" id="cat" name="pet_type" value="cat">
+                    Cat
+                </label>
+
+                <br><br>
+
+                <label>Breed of the pet:
+                    <input type="breed" id="breed" name="breed" placeholder="Enter a breed">
+                </label>
+
+                <br><br>
+                <label>Preferred age:
+                    <select name="age" id="age" size="1">
+                        <option value="" selected style="color: grey;">Select an age</option>
+                        <option value="does_not_matter">Doesn't matter</option>
+                        <option value="less_than_1_y/o">Less than 1 year old</option>
+                        <option value="1_to_5_y/o">1-5 years old</option>
+                        <option value="5_to_10_y/o">5-10 years old</option>
+                        <option value="10_to_15_y/o">10-15 years old</option>
+                        <option value="more_than_15_y/o">More than 15 years old</option>
+                    </select>
+                </label>
+
+                <br><br>
+
+                <label>Preferred gender:
+                    <select name="gender" id="gender" size="1">
+                        <option value="" selected style="color: grey;">Select a gender</option>
+                        <option value="does_not_matter">Doesn't matter</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </label>
+                
+                <br><br>
+                
+                <label>Gets along with other dogs?
+                    <select name="friendly_with_dogs" id="friendly_with_dogs" size="1">
+                        <option value="" selected style="color: grey;">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+
+                <br><br>
+
+                <label>Gets along with other cats?
+                    <select name="friendly_with_cats" id="friendly_with_cats" size="1">
+                        <option value="" selected style="color: grey;">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+
+                <br><br>
+
+                <label>Gets along with other small children?
+                    <select name="friendly_with_children" id="friendly_with_children" size="1">
+                        <option value="" selected style="color: grey;">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+                
+                <br><br>
+
+                <input type="submit" value="Submit"/><input type="reset" value="Reset" />
+            </fieldset>
+        </form>        
+    </div>
+
+    <script>
+        document.getElementById("findPetForm").addEventListener("submit", event => {
+          const breed = document.getElementById("breed").value;
+          const age = document.getElementById("age").value;
+          const gender = document.getElementById("gender").value;
+          const friendly_with_dogs = document.getElementById("friendly_with_dogs").value;
+          const friendly_with_cats = document.getElementById("friendly_with_cats").value;
+          const friendly_with_children = document.getElementById("friendly_with_children").value;
+      
+          if (breed === "" || age === "" || gender === "" || friendly_with_dogs === "" || friendly_with_cats === "" || friendly_with_children === "") {
+            alert("Please fill in all the fields in the form.");
+            event.preventDefault();
+          }
+        });
+    </script>
+      
